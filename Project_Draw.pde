@@ -5,11 +5,15 @@ int g = 255;
 int b = 255;
 int e = 20;
 void setup(){
-  size(1080,800);
+  size(2160,1600);
   background(50);
 }
 
 void draw(){
+  strokeWeight(1);
+  stroke(90,90,200);
+  fill(50,180,180);
+  rect(10,10,30,30);
   //background(50);
   stroke(0);
   strokeWeight(2);
@@ -28,7 +32,7 @@ void draw(){
     if(key == '8'){
       t=t+1;
     }
-    if(t>10)
+    if(t>20)
     t=10;
       }
       //when mouse is pressed, draws a line.
@@ -62,9 +66,15 @@ void draw(){
           e=100;
              }
              //when Q is pressed, redraws background as a reset/clear.
-  if(keyPressed){
-    if(key == 'Q' || key == 'q'){
+  if(mouseX>10){
+  if(mouseX<40){
+    if(mouseY>10){
+      if(mouseY<40){
+    if(mousePressed){
     background(50);
+  }
+  }
+    }
   }
   }
   //when 1 is pressed, decrease R value.
@@ -117,10 +127,14 @@ void draw(){
           }
           {
             //texts of functions
-  fill(150,50,150);
+  fill(200,50,50);
+  textSize(10);
+  text("clear",15,30);
+  fill(180,50,180);
   textAlign(0);
-  textSize(23);
-  text("Q:reset| |1/2: -/+ r value| |3/4: -/+ g value| |5/6: -/+ b value| |7/8 -/+ strokeWeight",25,25);
-  text("| |E:eraser| |9/0: -/+ eraser Size",50,50);
+  textSize(16);
+  text("1/2: -/+ red value| |3/4: -/+ green value| |5/6: -/+ blue value| |7/8 -/+ strokeWeight| |E:eraser| |9/0: -/+ eraser Size",45,35);
+  stroke(50);
+  text("FUNCTIONS",200,18);
              }
              }
