@@ -13,16 +13,65 @@ void setup(){
 
 void draw(){
   fill(255);
-  rect(0,0,75,75);
+  rect(0,0,75,400);
   if(mousePressed){
     strokeWeight(t);
     line(mouseX,mouseY,pmouseX,pmouseY);
     stroke(W);
   }
+  if(mousePressed){
+    if(mouseX>0){
+      if(mouseY>25){
+        if(mouseX<25){
+          if(mouseY<50){
+            e= e-1;
+            if(e<10);
+            e=10;
+          }
+        }
+      }
+    }
+    if(mousePressed){
+    if(mouseX>0){
+      if(mouseY>50){
+        if(mouseX<25){
+          if(mouseY<75){
+            e= e+1;
+            if(e>30);
+            e=30;
+          }
+        }
+      }
+    }
+   }
+   if(mousePressed){
+     if(mouseX>25){
+       if(mouseY>25){
+         if(mouseX<75){
+           if(mouseY<75){
+             stroke(0);
+             ellipse(mouseX,mouseY,e,e);
+           }
+         }
+       }
+     }
+   }
+  }
+  strokeWeight(1);
+  stroke(0);
+  ellipse(37,115,e,e);
   strokeWeight(1);
   stroke(W);
   fill(r);
   rect(0,0,25,25);
+  fill(255);
+  stroke(B);
+  rect(0,25,25,25);
+  rect(0,150,25,25);
+  rect(0,275,25,25);
+  rect(0,50,25,25);
+  rect(0,175,25,25);
+  rect(0,300,25,25);
   if(mouseX>0){
     if(mouseY>0){
       if(mouseX<25){
@@ -67,30 +116,30 @@ void draw(){
   stroke(W);
   textSize(23);
   fill(0);
-  text("+", 4, 71); 
+  text("+", 5, 71); 
     stroke(W);
   textSize(23);
   fill(0);
-  text("+", 29, 71); 
+  text("+", 5, 196); 
     stroke(W);
   textSize(23);
   fill(0);
-  text("+", 54, 71); 
+  text("+", 5, 321); 
   stroke(W);
   textSize(30);
   fill(0);
-  text("-", 5, 43); 
+  text("-", 5, 49); 
     stroke(W);
   textSize(30);
   fill(0);
-  text("-", 29, 43); 
+  text("-", 5, 174); 
     stroke(W);
   textSize(30);
   fill(0);
-  text("-", 54, 43); 
-  if(mouseX>1840){
+  text("-", 5, 299); 
+  if(mouseX>100){
     if(mouseY>11){
-      if(mouseX<1911){
+      if(mouseX<171){
         if(mouseY<30){
           if(mousePressed){
             background(50);
@@ -101,7 +150,7 @@ void draw(){
   }
     textSize(23);
   fill(255);
-rect(1840,12,70,21);
+rect(100,12,70,21);
   fill(0);
-  text("Delete", 1840, 30); 
+  text("Delete", 100, 30); 
 }
